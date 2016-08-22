@@ -65,8 +65,8 @@ public class Manager {
                 let osNameVersion: String = {
                     let versionString: String
 
-                    if #available(OSX 10.10, *) {
-                        let version = NSProcessInfo.processInfo().operatingSystemVersion
+                    if #available(OSX 10.10, iOS 8.0, *)  {
+						let version = NSProcessInfo.processInfo().operatingSystemVersion
                         versionString = "\(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
                     } else {
                         versionString = "10.9"
